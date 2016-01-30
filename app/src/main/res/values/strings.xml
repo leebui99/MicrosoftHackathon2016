@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Yaker!</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="tittle">Yaker!</string>
+    <string name="color">Colors</string>
+    <string name="picture">Picture</string>
+    <string name="time">Time</string>
+    <string name="score">Score</string>
+</resources>
