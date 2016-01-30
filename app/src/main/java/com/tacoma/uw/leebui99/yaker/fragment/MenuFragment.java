@@ -1,6 +1,7 @@
 package com.tacoma.uw.leebui99.yaker.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+
+
 
 import com.tacoma.uw.leebui99.yaker.R;
 
@@ -42,9 +45,13 @@ public class MenuFragment extends Fragment {
         mColor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((LauncherMenuListener)getActivity()).launchMenu();
+                Intent myIntent = new Intent(v.getContext(), ColorActivity.class);
+                Bundle bundle = new Bundle();
+                startActivity(myIntent);
             }
         });
+
+
         return v;
     }
 

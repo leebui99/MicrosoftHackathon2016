@@ -18,6 +18,13 @@
         android:layout_gravity="center_horizontal"/>
 
     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EXIT"
+        android:id="@+id/button2"
+        android:layout_gravity="right" />
+
+    <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="400px"
         android:layout_height="wrap_content"
