@@ -14,7 +14,9 @@ import com.tacoma.uw.leebui99.yaker.R;
  */
 public class ColorSection extends Fragment {
 
-
+    public interface LauncherColorListener{
+        public void launchColorSection();
+    }
 
     public ColorSection() {
         // Required empty public constructor

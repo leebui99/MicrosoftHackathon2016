@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.tacoma.uw.leebui99.yaker.R;
 
@@ -17,6 +18,9 @@ import com.tacoma.uw.leebui99.yaker.R;
 public class MenuFragment extends Fragment {
 
     private LauncherMenuListener mLauncherMenuListener;
+    private TextView mTittle;
+    private Button mColor;
+    private Button mPic;
 
     public interface LauncherMenuListener{
         public void launchMenu();
@@ -31,8 +35,16 @@ public class MenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_menu, container, false);
-        Button mColor = (Button) v.findViewById(R.id.color);
-        Button mTime = (Button) v.findViewById(R.id.picture);
+        mTittle = (TextView) v.findViewById(R.id.tittle);
+
+        mPic = (Button) v.findViewById(R.id.picture);
+        mColor = (Button) v.findViewById(R.id.color);
+        mColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((LauncherMenuListener)getActivity()).launchMenu();
+            }
+        });
         return v;
     }
 
